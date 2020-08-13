@@ -11,8 +11,8 @@ jobs:
       - name: Build and push docker
         uses: docker/build-push-action@v1
         with:
+          dockerfile:  ../Dockerfile
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
-          repository: DOCKER_REPOSITORY
+          repository: riteshshrv/sqljobber
           tags: latest
-          tag_with_sha: true
